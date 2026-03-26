@@ -5,6 +5,11 @@
 }
 
 @font-face {
+    font-family: 'CursiveFont';
+    src: url('fonts/cursive.ttf') format('truetype');
+}
+
+@font-face {
     font-family: 'GreatVibes';
     src: url('fonts/GreatVibes.otf') format('opentype');
 }
@@ -19,10 +24,7 @@
     src: url('fonts/EBGaramond.ttf') format('truetype');
 }
 
-@font-face {
-    font-family: 'CursiveFont';
-    src: url('fonts/cursive.ttf') format('truetype');
-}
+
 
 /* ========== RESET & BASE ========== */
 * {
