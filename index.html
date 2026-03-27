@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>Meer's Family | Wedding Invitation</title>
+    <!-- Poppins Font - Single Font for Whole Site -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -64,7 +66,7 @@
             <div class="couple-grid">
                 <div class="groom-grid">
                     <img src="images/groom.jpg" alt="Groom">
-                    <h3 class="candle-name">Mohammed Saif Uddin</h3>
+                    <h3 class="couple-name">Mohammed Saif Uddin</h3>
                     <p class="father-name">(S/o Mohammed Maseeh Uddin)</p>
                 </div>
                 <div class="weds-grid">
@@ -72,16 +74,16 @@
                 </div>
                 <div class="bride-grid">
                     <img src="images/bride.jpg" alt="Bride">
-                    <h3 class="candle-name">Mazima Begum</h3>
+                    <h3 class="couple-name">Mazima Begum</h3>
                     <p class="father-name">(D/o Shaik Sami Ullah)</p>
                 </div>
             </div>
             
             <div class="hero-text">
                 <div class="couple-names">
-                    <span class="candle-name">Mohammed Saif Uddin</span>
+                    <span class="couple-name">Mohammed Saif Uddin</span>
                     <i class="fas fa-star-of-life"></i>
-                    <span class="candle-name">Mazima Begum</span>
+                    <span class="couple-name">Mazima Begum</span>
                 </div>
                 <div class="date-badge">
                     <i class="fas fa-calendar-alt"></i> 29th May 2027 | 1st Zilhajja 1446 Hijri
@@ -199,7 +201,7 @@
         </div>
     </section>
 
-       <!-- ========== RSVP SECTION ========== -->
+    <!-- ========== RSVP SECTION ========== -->
     <section id="rsvp" class="rsvp-section">
         <div class="container">
             <div class="section-header">
@@ -214,12 +216,10 @@
                         <label><i class="fas fa-user"></i> Full Name *</label>
                         <input type="text" id="rsvpName" placeholder="Enter your full name" required>
                     </div>
-                    
                     <div class="form-group">
                         <label><i class="fas fa-phone"></i> Phone Number *</label>
                         <input type="tel" id="rsvpPhone" placeholder="Enter your mobile number" required>
                     </div>
-                    
                     <div class="form-group">
                         <label><i class="fas fa-users"></i> Number of Guests *</label>
                         <div class="guest-count">
@@ -233,7 +233,6 @@
                             </div>
                         </div>
                     </div>
-                    
                     <div class="form-group">
                         <label><i class="fas fa-calendar-check"></i> Which events will you attend? *</label>
                         <div class="events-checkbox">
@@ -242,15 +241,12 @@
                             <label><input type="checkbox" id="attendWalima" value="Walima"> Valima Reception (31 May, 9:00 PM)</label>
                         </div>
                     </div>
-                    
                     <div class="form-group">
                         <label><i class="fas fa-comment"></i> Special Message / Dua (Optional)</label>
                         <textarea id="rsvpMessage" rows="3" placeholder="Any message or dua for the couple..."></textarea>
                     </div>
-                    
                     <button type="submit" class="btn-rsvp"><i class="fas fa-paper-plane"></i> Submit RSVP</button>
                 </form>
-                
                 <div class="rsvp-confirmation" id="rsvpConfirmation" style="display: none;">
                     <div class="confirmation-box">
                         <i class="fas fa-check-circle"></i>
@@ -262,7 +258,7 @@
         </div>
     </section>
 
-    <!-- ========== ADMIN PANEL - PASSWORD PROTECTED RSVP RESPONSES ========== -->
+    <!-- ========== ADMIN PANEL ========== -->
     <section id="adminPanel" class="admin-section">
         <div class="container">
             <div class="section-header">
@@ -270,7 +266,6 @@
                 <div class="border-line"></div>
                 <p class="section-subtitle">View and manage RSVP responses</p>
             </div>
-            
             <div class="admin-container" id="adminContainer">
                 <div class="login-box" id="loginBox">
                     <i class="fas fa-shield-alt"></i>
@@ -279,7 +274,6 @@
                     <button id="adminLoginBtn"><i class="fas fa-unlock-alt"></i> Login</button>
                     <p class="error-msg" id="loginError"></p>
                 </div>
-                
                 <div class="responses-box" id="responsesBox" style="display: none;">
                     <div class="responses-header">
                         <h3><i class="fas fa-users"></i> RSVP Responses</h3>
@@ -289,19 +283,9 @@
                     <div class="responses-table-wrapper">
                         <table class="responses-table" id="responsesTable">
                             <thead>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Phone</th>
-                                    <th>Adults</th>
-                                    <th>Children</th>
-                                    <th>Events</th>
-                                    <th>Message</th>
-                                    <th>Date</th>
-                                </tr>
+                                <tr><th>Name</th><th>Phone</th><th>Adults</th><th>Children</th><th>Events</th><th>Message</th><th>Date</th></tr>
                             </thead>
-                            <tbody id="responsesList">
-                                <tr><td colspan="7" style="text-align: center;">No responses yet</td></tr>
-                            </tbody>
+                            <tbody id="responsesList"><tr><td colspan="7" style="text-align: center;">No responses yet</td></tr></tbody>
                         </table>
                     </div>
                 </div>
@@ -309,7 +293,7 @@
         </div>
     </section>
 
-    <!-- ========== BEST WISHES SLIDER ========== -->
+    <!-- ========== BEST WISHES SLIDER (No Location Line) ========== -->
     <section id="wishes" class="wishes-slider-section">
         <div class="container">
             <div class="section-header">
@@ -317,81 +301,14 @@
                 <div class="border-line"></div>
                 <p class="section-subtitle">Loved ones are sending their heartfelt blessings for the couple</p>
             </div>
-            
             <div class="swiper wishesSwiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="wish-card">
-                            <div class="wish-img">
-                                <img src="images/person1.jpg" alt="Well Wisher">
-                            </div>
-                            <div class="wish-content">
-                                <h4>Meer Yousuf Ali</h4>
-                                <p class="wish-message">"May Allah bless this beautiful couple with endless happiness and barakah. Ameen!"</p>
-                                <i class="fas fa-heart"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="wish-card">
-                            <div class="wish-img">
-                                <img src="images/person2.jpg" alt="Well Wisher">
-                            </div>
-                            <div class="wish-content">
-                                <h4>Meer Yousuf Ali</h4>
-                                <p class="wish-message">"Masha Allah! May your marriage be filled with love, mercy, and understanding."</p>
-                                <i class="fas fa-heart"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="wish-card">
-                            <div class="wish-img">
-                                <img src="images/person3.jpg" alt="Well Wisher">
-                            </div>
-                            <div class="wish-content">
-                                <h4>Meer Yousuf Ali</h4>
-                                <p class="wish-message">"May Allah grant you a blessed and prosperous life together. Congratulations!"</p>
-                                <i class="fas fa-heart"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="wish-card">
-                            <div class="wish-img">
-                                <img src="images/person4.jpg" alt="Well Wisher">
-                            </div>
-                            <div class="wish-content">
-                                <h4>Meer Yousuf Ali</h4>
-                                <p class="wish-message">"Barakallah! May your Nikah be the beginning of a beautiful journey together."</p>
-                                <i class="fas fa-heart"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="wish-card">
-                            <div class="wish-img">
-                                <img src="images/person5.jpg" alt="Well Wisher">
-                            </div>
-                            <div class="wish-content">
-                                <h4>Meer Yousuf Ali</h4>
-                                <p class="wish-message">"May Allah shower His blessings on your beautiful union. Ameen!"</p>
-                                <i class="fas fa-heart"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="wish-card">
-                            <div class="wish-img">
-                                <img src="images/person6.jpg" alt="Well Wisher">
-                            </div>
-                            <div class="wish-content">
-                                <h4>Meer Yousuf Ali</h4>
-                                <p class="wish-message">"Wishing you a lifetime of love, happiness, and barakah. Congratulations!"</p>
-                                <i class="fas fa-heart"></i>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="swiper-slide"><div class="wish-card"><div class="wish-img"><img src="images/person1.jpg" alt="Well Wisher"></div><div class="wish-content"><h4>Meer Yousuf Ali</h4><p class="wish-message">"May Allah bless this beautiful couple with endless happiness and barakah. Ameen!"</p><i class="fas fa-heart"></i></div></div></div>
+                    <div class="swiper-slide"><div class="wish-card"><div class="wish-img"><img src="images/person2.jpg" alt="Well Wisher"></div><div class="wish-content"><h4>Meer Yousuf Ali</h4><p class="wish-message">"Masha Allah! May your marriage be filled with love, mercy, and understanding."</p><i class="fas fa-heart"></i></div></div></div>
+                    <div class="swiper-slide"><div class="wish-card"><div class="wish-img"><img src="images/person3.jpg" alt="Well Wisher"></div><div class="wish-content"><h4>Meer Yousuf Ali</h4><p class="wish-message">"May Allah grant you a blessed and prosperous life together. Congratulations!"</p><i class="fas fa-heart"></i></div></div></div>
+                    <div class="swiper-slide"><div class="wish-card"><div class="wish-img"><img src="images/person4.jpg" alt="Well Wisher"></div><div class="wish-content"><h4>Meer Yousuf Ali</h4><p class="wish-message">"Barakallah! May your Nikah be the beginning of a beautiful journey together."</p><i class="fas fa-heart"></i></div></div></div>
+                    <div class="swiper-slide"><div class="wish-card"><div class="wish-img"><img src="images/person5.jpg" alt="Well Wisher"></div><div class="wish-content"><h4>Meer Yousuf Ali</h4><p class="wish-message">"May Allah shower His blessings on your beautiful union. Ameen!"</p><i class="fas fa-heart"></i></div></div></div>
+                    <div class="swiper-slide"><div class="wish-card"><div class="wish-img"><img src="images/person6.jpg" alt="Well Wisher"></div><div class="wish-content"><h4>Meer Yousuf Ali</h4><p class="wish-message">"Wishing you a lifetime of love, happiness, and barakah. Congratulations!"</p><i class="fas fa-heart"></i></div></div></div>
                 </div>
                 <div class="swiper-pagination"></div>
                 <div class="swiper-button-next"></div>
@@ -407,78 +324,14 @@
                 <h2>Wedding Countdown</h2>
                 <div class="border-line white-line"></div>
             </div>
-            
-            <div class="countdown-block">
-                <h3 class="countdown-title">Nikah Ceremony</h3>
-                <div class="countdown-timer" id="nikahCountdown">
-                    <div class="timer-box">
-                        <span id="nikahDays" class="timer-num">00</span>
-                        <span class="timer-label">Days</span>
-                    </div>
-                    <div class="timer-box">
-                        <span id="nikahHours" class="timer-num">00</span>
-                        <span class="timer-label">Hours</span>
-                    </div>
-                    <div class="timer-box">
-                        <span id="nikahMinutes" class="timer-num">00</span>
-                        <span class="timer-label">Minutes</span>
-                    </div>
-                    <div class="timer-box">
-                        <span id="nikahSeconds" class="timer-num">00</span>
-                        <span class="timer-label">Seconds</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="countdown-block">
-                <h3 class="countdown-title">Valima Reception</h3>
-                <div class="countdown-timer" id="valimaCountdown">
-                    <div class="timer-box">
-                        <span id="valimaDays" class="timer-num">00</span>
-                        <span class="timer-label">Days</span>
-                    </div>
-                    <div class="timer-box">
-                        <span id="valimaHours" class="timer-num">00</span>
-                        <span class="timer-label">Hours</span>
-                    </div>
-                    <div class="timer-box">
-                        <span id="valimaMinutes" class="timer-num">00</span>
-                        <span class="timer-label">Minutes</span>
-                    </div>
-                    <div class="timer-box">
-                        <span id="valimaSeconds" class="timer-num">00</span>
-                        <span class="timer-label">Seconds</span>
-                    </div>
-                </div>
-            </div>
-            
+            <div class="countdown-block"><h3 class="countdown-title">Nikah Ceremony</h3><div class="countdown-timer" id="nikahCountdown"><div class="timer-box"><span id="nikahDays" class="timer-num">00</span><span class="timer-label">Days</span></div><div class="timer-box"><span id="nikahHours" class="timer-num">00</span><span class="timer-label">Hours</span></div><div class="timer-box"><span id="nikahMinutes" class="timer-num">00</span><span class="timer-label">Minutes</span></div><div class="timer-box"><span id="nikahSeconds" class="timer-num">00</span><span class="timer-label">Seconds</span></div></div></div>
+            <div class="countdown-block"><h3 class="countdown-title">Valima Reception</h3><div class="countdown-timer" id="valimaCountdown"><div class="timer-box"><span id="valimaDays" class="timer-num">00</span><span class="timer-label">Days</span></div><div class="timer-box"><span id="valimaHours" class="timer-num">00</span><span class="timer-label">Hours</span></div><div class="timer-box"><span id="valimaMinutes" class="timer-num">00</span><span class="timer-label">Minutes</span></div><div class="timer-box"><span id="valimaSeconds" class="timer-num">00</span><span class="timer-label">Seconds</span></div></div></div>
             <p class="countdown-message">✨ Counting down to the blessed days ✨</p>
         </div>
     </section>
 
     <!-- ========== FOOTER ========== -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-info">
-                <h3>Website Information</h3>
-                <p><i class="fas fa-code"></i> Designed & Developed by: <strong>Meer Yousuf Ali</strong></p>
-                <p><i class="fas fa-phone"></i> Contact: +91 8688477738</p>
-                <p><i class="fas fa-envelope"></i> Email: meeryousufali3@gmail.com</p>
-                <p><i class="fas fa-map-marker-alt"></i> Address: Narqat Phool Bagh, Chandrayan Gutta, Hyderabad</p>
-            </div>
-            <div class="footer-social">
-                <h3>Follow Us</h3>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-whatsapp"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2027 Meer's Family. All Rights Reserved.</p>
-        </div>
-    </footer>
+    <footer class="footer"><div class="footer-content"><div class="footer-info"><h3>Website Information</h3><p><i class="fas fa-code"></i> Designed & Developed by: <strong>Meer Yousuf Ali</strong></p><p><i class="fas fa-phone"></i> Contact: +91 8688477738</p><p><i class="fas fa-envelope"></i> Email: meeryousufali3@gmail.com</p><p><i class="fas fa-map-marker-alt"></i> Address: Narqat Phool Bagh, Chandrayan Gutta, Hyderabad</p></div><div class="footer-social"><h3>Follow Us</h3><div class="social-icons"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-facebook"></i></a><a href="#"><i class="fab fa-whatsapp"></i></a></div></div></div><div class="footer-bottom"><p>&copy; 2027 Meer's Family. All Rights Reserved.</p></div></footer>
 
     <script src="script.js"></script>
 </body>
